@@ -1,6 +1,6 @@
 const { GraphQLSchema, GraphQLObjectType } = require("graphql");
 const { getAllPeople } = require("../query/people.query");
-const { addPeople } = require("../mutation/people.mutation");
+const { addPeople, loginPeople } = require("../mutation/people.mutation");
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQuery",
@@ -12,6 +12,7 @@ const RootMutation = new GraphQLObjectType({
   name: "RootMutation",
   fields: {
     addPeople,
+    loginPeople,
   },
 });
 
